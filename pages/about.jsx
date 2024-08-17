@@ -17,10 +17,10 @@ const About = () => {
           distinctio. <strong>My Store</strong>, where every detail is crafted
           to perfection.
         </div>
-        <div className="m-12 ">
+        <div className="mt-4">
           <img
             src="https://siyaram-images.s3.ap-south-1.amazonaws.com/images/banner/siyarams.webp"
-            className="md:min-h-96"
+            
             alt="myimage"
           />
         </div>
