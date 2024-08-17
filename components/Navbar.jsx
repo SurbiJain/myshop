@@ -14,9 +14,7 @@ const Navbar = ({ user, key, logOut }) => {
   .reduce((prevValue, currValue) => prevValue + currValue, 0);
   const router = useRouter()
   const [dropDown, setDropDown] = useState(false);
-  const toggleDropdown = () => {
-    setDropDown(!dropDown);
-  };
+ 
 
 
 
@@ -30,7 +28,7 @@ const Navbar = ({ user, key, logOut }) => {
         />
       </Link>
       <div className="nav md:self-center self-start md:m-0 m-4">
-        <ul className="flex space-x-10 font-bold md:ml-20  ">
+        <ul className="flex space-x-5 font-bold md:ml-20  ">
           <Link href={"/about"}>
             <li>About us</li> 
           </Link>
@@ -43,7 +41,7 @@ const Navbar = ({ user, key, logOut }) => {
           </Link>
         </ul>
       </div>
-      <div className="flex gap-4 cart absolute right-0 top-8 md:top-5 mx-5" onMouseLeave={()=>setDropDown(false)}>
+      <div className="flex gap-1 md:gap-4 cart absolute right-0 top-8 md:top-5 mx-5" onMouseLeave={()=>setDropDown(false)}>
         {user.value ? (
           <MdAccountCircle
             onMouseOver={()=>setDropDown(true)}
@@ -51,7 +49,7 @@ const Navbar = ({ user, key, logOut }) => {
           />
         ) : (
           <Link href={"/login"}>
-            <button className="border px-2 py-1 bg-black text-white rounded-md">LogIn</button>
+            <button className="border  px-2 py-1 bg-black text-white rounded-md">LogIn</button>
           </Link>
         )}
         <div className="relative top-0 right-0">
