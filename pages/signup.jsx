@@ -35,17 +35,17 @@ const Signup = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault()
     const formData = {name, email, password}
+      console.log(formData)
+    // let res = fetch("/api/signup", {
+    //   method: "POST",
+    //   headers: {"content-type": "application/json"},
+    //   body: JSON.stringify(formData)
+    // })
+    // .then(response => response.json())
+    // .then(data=>{
 
-    let res = fetch("/api/signup", {
-      method: "POST",
-      headers: {"content-type": "application/json"},
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data=>{
-
-    })
-    .catch(error=>console.log(error))
+    // })
+    // .catch(error=>console.log(error))
     setEmail('')
     setName('')
     setPassword('')

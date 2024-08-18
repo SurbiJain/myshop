@@ -1,20 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdAccountCircle } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
-const Navbar = ({ user, key, logOut }) => {
+const Navbar = ({ user, key, logOut, login, setLogin }) => {
   const { cart } = useSelector((state) => {
     return state.cart;
   });
+  
   const cartQuantity = cart
   .map((item) => item.quantity)
   .reduce((prevValue, currValue) => prevValue + currValue, 0);
   const router = useRouter()
   const [dropDown, setDropDown] = useState(false);
- 
+
+ useEffect(()=>{
+ if (localStorage.getItem("user")) {
+setLogin(true)
+ }
+ })
 
 
 
@@ -42,7 +48,12 @@ const Navbar = ({ user, key, logOut }) => {
         </ul>
       </div>
       <div className="flex gap-1 md:gap-4 cart absolute right-0 top-8 md:top-5 mx-5" onMouseLeave={()=>setDropDown(false)}>
-        {user.value ? (
+        {/* {user.value ? (
+          <MdAccountCircle
+            onMouseOver={()=>setDropDown(true)}
+            className="text-4xl"
+          /> */}
+          {login ? (
           <MdAccountCircle
             onMouseOver={()=>setDropDown(true)}
             className="text-4xl"

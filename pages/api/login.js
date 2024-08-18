@@ -3,6 +3,18 @@ var CryptoJs = require("crypto-js");
 var jwt = require('jsonwebtoken');
 
 export default async function handler(req, res) {
+  if(req.method==="GET"){
+    try{
+      const querySql = "SELECT *  FROM users";
+      const valueParams = [];
+      const result = await query({query: querySql, value: valueParams });
+      res.status(200).json({ name: result });
+    }
+    catch(error){
+      res.status(500).json({ error: error.message });
+    }  
+  }
+  l
   if (req.method === "POST") {
     const { email, password } = req.body;
 

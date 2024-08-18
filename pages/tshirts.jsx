@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import DATA from './../public/getdata';
 
 const tshirts = ({ tshirts }) => {
   return (
@@ -68,9 +69,13 @@ const tshirts = ({ tshirts }) => {
   );
 };
 export async function getServerSideProps(context) {
-  const apiUrlEndpoint = `${process.env.NEXT_PUBLIC_HOST}/api/getdata`;
-  const response = await fetch(apiUrlEndpoint);
-  const res = await response.json();
+
+  // USING STATIC JSON AS I COULD NOT RESTORE .SQL FILE ON VERSEL
+
+  //const apiUrlEndpoint = `${process.env.NEXT_PUBLIC_HOST}/api/getdata`;
+  // const response = await fetch(apiUrlEndpoint);
+  // const res = await response.json();
+  const res = DATA;
   let products = res.name;
   let tshirts = {};
   for (let item of products) {

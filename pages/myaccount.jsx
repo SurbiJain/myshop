@@ -1,11 +1,14 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const Myaccount = () => {
+const Myaccount = ({login}) => {
   const router = useRouter();
   useEffect(()=>{
-    if(!localStorage.getItem("token")){
+    // if(!localStorage.getItem("token")){
+    //   router.push('/login')
+    // }
+    if(!login){
       router.push('/login')
     }
   }, [])

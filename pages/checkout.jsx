@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
-const Checkout = () => {
+const Checkout = ({login}) => {
   const router = useRouter()
   const { cart } = useSelector((state) => {
     return state.cart;
@@ -11,9 +11,12 @@ const Checkout = () => {
     return state.cart.subTotal;
   });
   useEffect(()=>{
-    if(!localStorage.getItem("token")){
+    if(!login){
       router.push('/login')
     }
+    // if(!localStorage.getItem("token")){
+    //   router.push('/login')
+    // }
   })
 
   return (
