@@ -13,7 +13,7 @@ const Myaccount = ({login}) => {
     }
   }, [])
   return (
-    <div>myaccount</div>
+    <section className="main p-6">myaccount</section>
   )
 }
 

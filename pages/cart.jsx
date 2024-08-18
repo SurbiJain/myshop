@@ -16,7 +16,7 @@ const Cart = () => {
   const cartQuantity = cart?.length;
 
   return (
-    <section class="bg-white py-8 main md:py-16">
+    <section class="bg-white p-6 main md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
       <h2 class="text-xl font-semibold text-gray-900e sm:text-2xl">Shopping Cart</h2>
   

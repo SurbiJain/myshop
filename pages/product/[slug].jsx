@@ -51,11 +51,11 @@ const Product = ({ product, variants }) => {
         })
       );
       router.push("../checkout");
-    } 
+    }
   };
   return (
     <>
-      <section className="text-gray-600 body-font main">
+      <section className="text-gray-600 body-font main p-6">
         <ToastContainer
           position="top-right"
           autoClose={1000}

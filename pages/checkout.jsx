@@ -20,7 +20,7 @@ const Checkout = ({login}) => {
   })
 
   return (
-   <section className='main grid sm:px-10 lg:grid-cols-2 lg:px-20 ml-4 xl:px-32'>  
+   <section className='main grid  md:grid-cols-2 md:px-20 ml-4  p-6'>  
   <div class="px-4 pt-8">
     <p class="text-xl font-medium">Order Summary</p>
     <p class="text-gray-400">Check your items.</p>

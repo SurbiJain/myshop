@@ -9,7 +9,7 @@ const Forgot = () => {
     }
   })
   return (
-    <div className='main'>forgot</div>
+    <section className='main p-6'>forgot</section>
   )
 }
 
