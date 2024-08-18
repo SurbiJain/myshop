@@ -11,18 +11,14 @@ export default function Home() {
           content="Delhi Fashion Emporium - we create your dream clothes"
         />
       </Head>
-
       <img
         src="https://siyaram-images.s3.ap-south-1.amazonaws.com/images/banner/siyarams.webp"
         className="w-full"
-        alt="cover image"
-      />
+        alt="cover image" />
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24`}
-      >
-        <section className="text-gray-600 body-font">
-          <div className="container py-24">
-            <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        className={`flex min-h-screen flex-col items-center justify-between p-6`} >
+          <div className="text-gray-600 container md:pt-10">
+            <div className="flex flex-wrap w-full mb-4 md:mb-10 flex-col items-center text-center">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                 Fashion For Entire Delhi
               </h1>
@@ -30,7 +26,7 @@ export default function Home() {
                 Choose your designs
               </p>
             </div>
-            <div className="flex flex-wrap md:flex-nowrap -m-4 gap-4">
+            <div className="flex flex-wrap md:flex-nowrap gap-4">
               <div className=" border border-gray-200 p-6 rounded-lg md:w-1/2 ">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-black-100 text-black-500 mb-4">
                   <svg
@@ -100,7 +96,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+       
       </main>
     </div>
   );

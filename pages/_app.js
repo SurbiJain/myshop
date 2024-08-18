@@ -4,10 +4,10 @@ import "@/styles/globals.css";
 import LoadingBar from "react-top-loading-bar";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
-import { loadCart, saveCart } from "@/redux/cartSlice";
+import { loadCart } from "@/redux/cartSlice";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import React, { useRef } from "react";
+import React from "react";
 
 function App({ Component, pageProps }) {
   const [user, setUser] = useState({ value: null });
@@ -45,7 +45,7 @@ function App({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <Provider store={store}>
-        <Navbar logOut={logOut} login={login} setLogin={setLogin} user={user} key={key} />{" "}
+        <Navbar logOut={logOut} login={login} setLogin={setLogin} user={user}  />{" "}
         <Component {...pageProps} login={login} setLogin={setLogin}/>
         <Footer />
       </Provider>

@@ -39,16 +39,19 @@ const Product = ({ product, variants }) => {
     
   };
   const handleBuyNow = (item) => {
-    dispatch(
-      buyNow({
-        itemCode: item.id,
-        quantity: quantity,
-        price: Number(item.price) * Number(quantity),
-        title: item.title,
-      })
-    );
-
-    router.push("../checkout");
+    if(quantity<=0){
+      notifyError()
+    } else{
+      dispatch(
+        buyNow({
+          itemCode: item.id,
+          quantity: quantity,
+          price: Number(item.price) * Number(quantity),
+          title: item.title,
+        })
+      );
+      router.push("../checkout");
+    } 
   };
   return (
     <>
