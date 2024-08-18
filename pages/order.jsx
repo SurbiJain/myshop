@@ -1,16 +1,16 @@
 import { mycart } from "@/redux/cartSlice";
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 const Order = () => {
   const cart = useSelector(mycart);
   const router = useRouter();
-  useEffect(()=>{
-    if(!localStorage.getItem("token")){
-      router.push('/login')
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      router.push("/login");
     }
-  })
+  });
   return (
     <section className="text-gray-600 body-font overflow-hidden p-6">
       <div className="container px-5 py-24 mx-auto">

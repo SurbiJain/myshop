@@ -20,7 +20,6 @@ const About = () => {
         <div className="mt-4">
           <img
             src="https://siyaram-images.s3.ap-south-1.amazonaws.com/images/banner/siyarams.webp"
-            
             alt="myimage"
           />
         </div>

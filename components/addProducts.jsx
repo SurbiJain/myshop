@@ -8,7 +8,7 @@ const AddProduct = () => {
     img: "",
     category: "",
     size: "",
-    color:"",
+    color: "",
     price: "",
     availableQty: "",
   });
@@ -33,7 +33,7 @@ const AddProduct = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     handleAddProduct();
     setProduct({
       title: "",
@@ -41,7 +41,7 @@ const AddProduct = () => {
       img: "",
       category: "",
       size: "",
-      color:"",
+      color: "",
       price: "",
       availableQty: "",
     });
@@ -49,7 +49,7 @@ const AddProduct = () => {
 
   return (
     <form onSubmit={handleSubmit} className="product-form">
-     <div className="form-group">
+      <div className="form-group">
         <label htmlFor="name">Product Name:</label>
         <input
           type="text"
@@ -115,7 +115,7 @@ const AddProduct = () => {
           required
         />
       </div>
-      
+
       <div className="form-group">
         <label htmlFor="image">Price:</label>
         <input
@@ -138,7 +138,7 @@ const AddProduct = () => {
           required
         />
       </div>
-      
+
       <button type="submit">Add Product</button>
     </form>
   );

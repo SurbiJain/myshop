@@ -15,8 +15,7 @@ function App({ Component, pageProps }) {
   const [login, setLogin] = useState(false);
   const router = useRouter();
   const logOut = () => {
-    localStorage.removeItem("user"),
-    setLogin(false)
+    localStorage.removeItem("user"), setLogin(false);
     setKey(Math.random()), setUser({ value: null });
   };
   const [progress, setProgress] = useState(0);
@@ -45,8 +44,8 @@ function App({ Component, pageProps }) {
         onLoaderFinished={() => setProgress(0)}
       />
       <Provider store={store}>
-        <Navbar logOut={logOut} login={login} setLogin={setLogin} user={user}  />{" "}
-        <Component {...pageProps} login={login} setLogin={setLogin}/>
+        <Navbar logOut={logOut} login={login} setLogin={setLogin} user={user} />{" "}
+        <Component {...pageProps} login={login} setLogin={setLogin} />
         <Footer />
       </Provider>
     </>
