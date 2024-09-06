@@ -71,6 +71,13 @@ const Product = ({ product, variants }) => {
           className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
           key={product.id}
         >
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 ">
+            <img
+              className=" h-[40vh] object-cover object-center rounded"
+              alt="hero"
+              src={product.img}
+            />
+          </div>
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900">
               {product.title} ({product.size}/{product.color})
@@ -237,13 +244,7 @@ const Product = ({ product, variants }) => {
               </div>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 ">
-            <img
-              className=" h-[40vh] object-cover object-center rounded"
-              alt="hero"
-              src={product.img}
-            />
-          </div>
+          
         </div>
       </section>
     </>
